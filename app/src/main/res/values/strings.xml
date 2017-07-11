@@ -20,9 +20,9 @@
     <string name="registro_Clave">Clave</string>
     <string name="registro_Reomgreso">Re-\ningrese</string>
     <string name="registro_b_Registrarme">Registrarme</string>
-    <string name="registro_h_Nombre">Ingrese Nombre</string>
-    <string name="registro_h_Apellido">Ingrese Apellido</string>
-    <string name="registro_h_DNI">Ingrese DNI</string>
+    <string name="registro_h_Nombre">Juan</string>
+    <string name="registro_h_Apellido">Pelotas</string>
+    <string name="registro_h_DNI">DNI / CUIL</string>
     <string name="registro_h_Mail">Ingrese Mail</string>
     <string name="registro_h_Clave">Ingrese Clave</string>
     <string name="registro_h_Reomgreso">Reingrese Clave</string>

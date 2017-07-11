@@ -25,4 +25,11 @@ public class Validacion {
     {
         return pass1.equals(pass2);
     }
+
+    public static boolean validarDNI(Integer dni)
+    {
+        if (dni.intValue() == -1)
+            return true;
+        return false;
+    }
 }

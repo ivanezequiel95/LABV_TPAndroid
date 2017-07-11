@@ -16,11 +16,19 @@
     <string name="registro_Nombre">Name</string>
     <string name="registro_Reomgreso">Retype</string>
     <string name="registro_b_Registrarme">Register</string>
-    <string name="registro_h_Apellido">Type Surname</string>
+    <string name="registro_h_Apellido">Balls</string>
     <string name="registro_h_Clave">Type Pass</string>
-    <string name="registro_h_DNI">Type DNI</string>
+    <string name="registro_h_DNI">DNI / CUIL</string>
     <string name="registro_h_Mail">Type Mail</string>
-    <string name="registro_h_Nombre">Type Name</string>
+    <string name="registro_h_Nombre">John</string>
     <string name="registro_h_Reomgreso">Retype Pass</string>
     <string name="login_o">or</string>
+    <string name="menu_Estimado">Estimated\nPrice</string>
+    <string name="menu_Seleccionados">Selected Items</string>
+    <string name="menu_Titulo">Preparing Order...</string>
+    <string name="menu_b_Enviar">Send Order</string>
+    <string name="pedido_Estimado">Estimated\nPrice</string>
+    <string name="pedido_Seleccionados">Selected Items</string>
+    <string name="pedido_Titulo">Your Order</string>
+    <string name="pedido_b_Enviar">Send Order</string>
 </resources>
