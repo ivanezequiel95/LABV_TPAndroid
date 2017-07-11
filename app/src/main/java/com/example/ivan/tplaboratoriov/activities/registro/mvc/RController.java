@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.Toast;
 
+import com.example.ivan.tplaboratoriov.R;
 import com.example.ivan.tplaboratoriov.activities.registro.listener.IRegistro;
 import com.example.ivan.tplaboratoriov.activities.registro.listener.RegistroListener;
 import com.example.ivan.tplaboratoriov.clases_datos.Usuario;
@@ -54,16 +55,16 @@ public class RController implements IRegistro{
                 {
                     if (Usuario.registrarUsuario(new Usuario(nombre, apellido, dni, mail, pass)))
                     {
-                        Toast.makeText(this.view.getActRegistro(), "Felicitaciones!!/nUsted se ha registrado!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_Nuevo), Toast.LENGTH_SHORT).show();
                         this.view.getActRegistro().finish();
                     }else
-                        Toast.makeText(this.view.getActRegistro(), "Lo sentimos, pruebe con otro Mail", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_OtroMail), Toast.LENGTH_SHORT).show();
 
                 }else
-                    Toast.makeText(this.view.getActRegistro(), "Vuelva a confirmar su Clave", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_ConfirmeClave), Toast.LENGTH_SHORT).show();
             }else
-                Toast.makeText(this.view.getActRegistro(), "Se debe ingresar un mail", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_IngreseMail), Toast.LENGTH_SHORT).show();
         }else
-            Toast.makeText(this.view.getActRegistro(), "Complete TODOS los campos pls xd", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_Complete), Toast.LENGTH_SHORT).show();
     }
 }

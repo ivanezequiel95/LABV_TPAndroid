@@ -33,10 +33,17 @@
     <string name="menu_Seleccionados">Elementos Seleccionados:</string>
     <string name="menu_b_Enviar">Enviar Pedido</string>
 
-    <!--Menu-->
+    <!--Pedido-->
     <string name="pedido_Titulo">Mi Pedido</string>
     <string name="pedido_Estimado">Importe\nEstimado:</string>
     <string name="pedido_Seleccionados">Elementos Seleccionados:</string>
     <string name="pedido_b_Enviar">Enviar Pedido</string>
+
+    <!--Mensajes de dialogo-->
+    <string name="registro_Nuevo">Felicitaciones!!/nUsted se ha registrado!</string>
+    <string name="registro_OtroMail">Lo sentimos, pruebe con otro Mail</string>
+    <string name="registro_ConfirmeClave">Vuelva a confirmar su Clave</string>
+    <string name="registro_IngreseMail">Se debe ingresar un mail</string>
+    <string name="registro_Complete">Complete TODOS los campos pls xd</string>
 
 </resources>

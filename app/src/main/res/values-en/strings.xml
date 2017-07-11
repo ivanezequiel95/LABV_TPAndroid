@@ -31,4 +31,9 @@
     <string name="pedido_Seleccionados">Selected Items</string>
     <string name="pedido_Titulo">Your Order</string>
     <string name="pedido_b_Enviar">Send Order</string>
+    <string name="registro_Complete">Every field must be completed</string>
+    <string name="registro_ConfirmeClave">Confirm password again</string>
+    <string name="registro_IngreseMail">That\'s not an email</string>
+    <string name="registro_Nuevo">Congrats!!\nYou\'ve signed in</string>
+    <string name="registro_OtroMail">Sorry, try another address</string>
 </resources>
