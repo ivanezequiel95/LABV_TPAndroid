@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TPLaboratorioV</string>
+    <string name="login_Clave">Pass</string>
+    <string name="login_Mail">Mail</string>
+    <string name="login_Subtitulo">Welcome to the first app Buffet-UTN</string>
+    <string name="login_Titulo">User Login</string>
+    <string name="login_b_Ingresar">Login</string>
+    <string name="login_b_Registrarme">Register</string>
+    <string name="login_h_Clave">Type Pass</string>
+    <string name="login_h_Mail">Type Mail</string>
+    <string name="registro_Apellido">Surname</string>
+    <string name="registro_Clave">Pass</string>
+    <string name="registro_DNI">DNI</string>
+    <string name="registro_Mail">Mail</string>
+    <string name="registro_Nombre">Name</string>
+    <string name="registro_Reomgreso">Retype</string>
+    <string name="registro_b_Registrarme">Register</string>
+    <string name="registro_h_Apellido">Type Surname</string>
+    <string name="registro_h_Clave">Type Pass</string>
+    <string name="registro_h_DNI">Type DNI</string>
+    <string name="registro_h_Mail">Type Mail</string>
+    <string name="registro_h_Nombre">Type Name</string>
+    <string name="registro_h_Reomgreso">Retype Pass</string>
+    <string name="login_o">or</string>
+</resources>

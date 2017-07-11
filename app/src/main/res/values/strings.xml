@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">TPLaboratorioV</string>
+
+    <!--Login-->
+    <string name="login_Titulo">Login de Usuario</string>
+    <string name="login_Subtitulo">Bienvenido a la primer aplicación \nBuffet-UTN</string>
+    <string name="login_Mail">Mail</string>
+    <string name="login_Clave">Clave</string>
+    <string name="login_h_Mail">Ingrese Mail</string>
+    <string name="login_h_Clave">Ingrese Clave</string>
+    <string name="login_b_Ingresar">Ingresar</string>
+    <string name="login_o">ó</string>
+    <string name="login_b_Registrarme">Registrarme</string>
+
+    <!--Registro-->
+    <string name="registro_Nombre">Nombre</string>
+    <string name="registro_Apellido">Apellido</string>
+    <string name="registro_DNI">DNI</string>
+    <string name="registro_Mail">Mail</string>
+    <string name="registro_Clave">Clave</string>
+    <string name="registro_Reomgreso">Re-\ningrese</string>
+    <string name="registro_b_Registrarme">Registrarme</string>
+    <string name="registro_h_Nombre">Ingrese Nombre</string>
+    <string name="registro_h_Apellido">Ingrese Apellido</string>
+    <string name="registro_h_DNI">Ingrese DNI</string>
+    <string name="registro_h_Mail">Ingrese Mail</string>
+    <string name="registro_h_Clave">Ingrese Clave</string>
+    <string name="registro_h_Reomgreso">Reingrese Clave</string>
+
+    <!--Menu-->
+    <string name="menu_Titulo">Pidiendo...</string>
+    <string name="menu_Estimado">Importe\nEstimado:</string>
+    <string name="menu_Seleccionados">Elementos Seleccionados:</string>
+    <string name="menu_b_Enviar">Enviar Pedido</string>
+
+    <!--Menu-->
+    <string name="pedido_Titulo">Mi Pedido</string>
+    <string name="pedido_Estimado">Importe\nEstimado:</string>
+    <string name="pedido_Seleccionados">Elementos Seleccionados:</string>
+    <string name="pedido_b_Enviar">Enviar Pedido</string>
+
+</resources>
