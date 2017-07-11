@@ -10,6 +10,7 @@ import com.example.ivan.tplaboratoriov.activities.menu.MenuActivity;
 import com.example.ivan.tplaboratoriov.activities.registro.RegistroActivity;
 import com.example.ivan.tplaboratoriov.clases_datos.Usuario;
 import com.example.ivan.tplaboratoriov.R;
+import com.example.ivan.tplaboratoriov.validacion.Validacion;
 
 /**
  * Created by Ivan on 11/07/2017.
@@ -40,7 +41,19 @@ public class LController implements ILogin{
     public void clickBtn(View v) {
 
         if (v.getId() == R.id.login_b_login) {
-            this.login(new Usuario(this.view.getEtMail().getText().toString(), this.view.getEtPass().getText().toString()));
+
+            String mail = this.view.getEtMail().getText().toString();
+            String pass = this.view.getEtPass().getText().toString();
+
+            if (!Validacion.esVacio(mail) && !Validacion.esVacio(pass))
+            {
+                if (Validacion.esMail(mail))
+                {
+                    this.login(new Usuario(mail, pass));
+                }else
+                    Toast.makeText(this.view.getActLogin(), "Se debe ingresar un MAIL", Toast.LENGTH_SHORT).show();
+            }else
+                Toast.makeText(this.view.getActLogin(), "Complete TODOS los campos plis xd", Toast.LENGTH_SHORT).show();
         }
         if (v.getId() == R.id.login_b_reg)
             this.registrar();
