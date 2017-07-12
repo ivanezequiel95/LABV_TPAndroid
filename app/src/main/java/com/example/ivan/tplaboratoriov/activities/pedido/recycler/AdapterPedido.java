@@ -1,4 +1,4 @@
-package com.example.ivan.tplaboratoriov.activities.pedido.recycler.listener;
+package com.example.ivan.tplaboratoriov.activities.pedido.recycler;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 
 import com.example.ivan.tplaboratoriov.R;
 import com.example.ivan.tplaboratoriov.activities.pedido.mvc.PView;
-import com.example.ivan.tplaboratoriov.activities.pedido.recycler.ViewHolderPedido;
 import com.example.ivan.tplaboratoriov.clases_datos.Producto;
 
 import java.util.List;

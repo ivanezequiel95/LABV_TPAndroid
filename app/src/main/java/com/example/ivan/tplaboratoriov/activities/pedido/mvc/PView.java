@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.ivan.tplaboratoriov.R;
+import com.example.ivan.tplaboratoriov.activities.pedido.recycler.AdapterPedido;
 import com.example.ivan.tplaboratoriov.clases_datos.Pedido;
 
 /**
@@ -30,12 +31,15 @@ public class PView {
         this.tvPrecio = (TextView) this.actPedido.findViewById(R.id.tv_precio);
         this.tvSeleccionados = (TextView) this.actPedido.findViewById(R.id.tv_seleccionados);
         this.bEnviarPedido = (Button) this.actPedido.findViewById(R.id.pedido_b_enviar_pedido);
-        this.rvPedido = (RecyclerView) this.actPedido.findViewById(R.id.menu_recycler);
+        this.rvPedido = (RecyclerView) this.actPedido.findViewById(R.id.pedido_recycler);
 
         cargarDatos();
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.actPedido);
         this.rvPedido.setLayoutManager(linearLayoutManager);
+
+        AdapterPedido adapterPedido = new AdapterPedido(Pedido.pedidoList, this);
+        this.rvPedido.setAdapter(adapterPedido);
 
 
     }
@@ -50,6 +54,14 @@ public class PView {
 
     public RecyclerView getRvPedido() {
         return rvPedido;
+    }
+
+    public TextView getTvPrecio() {
+        return tvPrecio;
+    }
+
+    public TextView getTvSeleccionados() {
+        return tvSeleccionados;
     }
 
     public void cargarDatos()

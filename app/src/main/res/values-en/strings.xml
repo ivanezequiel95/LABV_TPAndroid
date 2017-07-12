@@ -42,4 +42,8 @@
     <string name="menu_tv_Seleccionados">0</string>
     <string name="pedido_tv_Precio">0.00</string>
     <string name="pedido_tv_Seleccionados">0</string>
+    <string name="pedido_dialogo_ErrorPedido">Your order is empty or it can\'t be processed</string>
+    <string name="pedido_dialogo_PedidoEnviado">Your order has been sent !</string>
+    <string name="pedido_dialogo_Precio">"Total amount: $ "</string>
+    <string name="pedido_dialogo_Seleccionados">"Total items: "</string>
 </resources>

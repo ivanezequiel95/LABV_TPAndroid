@@ -50,6 +50,11 @@
     <string name="registro_IngreseMail">Se debe ingresar un mail</string>
     <string name="registro_Complete">Complete TODOS los campos pls xd</string>
 
+    <string name="pedido_dialogo_ErrorPedido">Su pedido está vacio o no pudo ser procesado</string>
+    <string name="pedido_dialogo_PedidoEnviado">Su pedido ha sido procesado !</string>
+    <string name="pedido_dialogo_Precio">"Precio total: $ "</string>
+    <string name="pedido_dialogo_Seleccionados">Total items: </string>
+
     <!--Items Recycler View-->
     <string name="item_SinDescripcion">Sin Descripcion</string>
     <string name="item_Precio">0.00</string>

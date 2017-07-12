@@ -78,12 +78,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/menu_Estimado"
-                        android:layout_gravity="center"/>
+                        android:layout_gravity="center|left"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="6dp"
                         android:layout_marginRight="6dp"
                         android:text="$"
                         android:textSize="25sp"/>
