@@ -16,6 +16,6 @@ public class PedidoListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        this.iPedido.confirmarPedido(v);
+        this.iPedido.click(v);
     }
 }

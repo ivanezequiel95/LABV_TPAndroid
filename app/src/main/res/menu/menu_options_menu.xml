@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_options_menu">
+
+    <item
+        android:id="@+id/menu_options_b_verPedido"
+        android:title="@string/menu_options_menu_b_verPedido"/>
+
+    <item android:id="@+id/menu_options_b_Logout"
+        android:title="@string/options_menu_b_logout" />
+
+</menu>

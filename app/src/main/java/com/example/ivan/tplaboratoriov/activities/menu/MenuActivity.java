@@ -3,6 +3,8 @@ package com.example.ivan.tplaboratoriov.activities.menu;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.example.ivan.tplaboratoriov.R;
 import com.example.ivan.tplaboratoriov.activities.menu.mvc.MController;
@@ -27,6 +29,8 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_layout);
 
+        getSupportActionBar().setTitle(this.getString(R.string.menu_Titulo));
+
         Producto.productoList = new ArrayList<Producto>();
 
         Producto.productoList.add(new Producto("Porción pizza", 15.00));
@@ -46,5 +50,25 @@ public class MenuActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mView.cargarDatos();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_options_menu, menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.menu_options_b_verPedido)
+            mController.enviarPedido();
+
+        if (item.getItemId() == R.id.menu_options_b_Logout)
+            mController.logout();
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -59,4 +59,9 @@
     <string name="item_SinDescripcion">Sin Descripcion</string>
     <string name="item_Precio">0.00</string>
 
+    <!--Options Menu's-->
+    <string name="menu_options_menu_b_verPedido">Ver Pedido</string>
+    <string name="options_menu_b_logout">Logout</string>
+    <string name="pedido_options_menu_b_enviarPedido">Enviar Pedido</string>
+    <string name="pedido_options_menu_b_limpiarPedido">Limpiar Pedido</string>
 </resources>

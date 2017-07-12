@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pedido_options_menu">
+
+    <item
+        android:id="@+id/pedido_options_b_enviarPedido"
+        android:title="@string/pedido_options_menu_b_enviarPedido"/>
+
+    <item android:id="@+id/pedido_options_b_limpiarPedido"
+        android:title="@string/pedido_options_menu_b_limpiarPedido" />
+
+    <item android:id="@+id/pedido_options_b_Logout"
+        android:title="@string/options_menu_b_logout" />
+
+</menu>

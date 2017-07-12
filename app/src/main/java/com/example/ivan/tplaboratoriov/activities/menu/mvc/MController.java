@@ -28,10 +28,16 @@ public class MController implements IMenu{
     }
 
     @Override
-    public void enviarPedido(View view) {
+    public void enviarPedido() {
         Toast.makeText(this.mView.getActMenu(), "Se está mostrando su pedido", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this.mView.getActMenu(), PedidoActivity.class);
         this.mView.getActMenu().startActivity(intent);
+    }
+
+    @Override
+    public void click(View view) {
+        if (view.getId() == this.mView.getbEnviarPedido().getId())
+            enviarPedido();
     }
 
     public void logout()

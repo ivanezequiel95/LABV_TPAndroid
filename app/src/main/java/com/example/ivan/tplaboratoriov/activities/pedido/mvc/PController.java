@@ -2,10 +2,12 @@ package com.example.ivan.tplaboratoriov.activities.pedido.mvc;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.ivan.tplaboratoriov.R;
+import com.example.ivan.tplaboratoriov.activities.login.LoginActivity;
 import com.example.ivan.tplaboratoriov.activities.pedido.listener.AlertDialogListener;
 import com.example.ivan.tplaboratoriov.activities.pedido.listener.IPedido;
 import com.example.ivan.tplaboratoriov.activities.pedido.listener.PedidoListener;
@@ -27,7 +29,13 @@ public class PController implements IPedido {
     }
 
     @Override
-    public void confirmarPedido(View view) {
+    public void click(View view) {
+        if (view.getId() == this.pView.getbEnviarPedido().getId())
+            confirmarPedido();
+    }
+
+    @Override
+    public void confirmarPedido() {
 
         if (Pedido.getCantidadProductosPedido()>0)
         {
@@ -50,5 +58,14 @@ public class PController implements IPedido {
                 .setNeutralButton("OK", new AlertDialogListener(this.pView.getActPedido()))
                 .create();
         return alertBuilder;
+    }
+
+    public void logout()
+    {
+        Pedido.unsetPedido();
+
+        Intent intent = new Intent(this.pView.getActPedido(), LoginActivity.class);
+        this.pView.getActPedido().startActivity(intent);
+        this.pView.getActPedido().finish();
     }
 }

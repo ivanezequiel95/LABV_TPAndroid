@@ -8,5 +8,6 @@ import android.view.View;
 
 public interface IPedido {
 
-    public void confirmarPedido(View view);
+    public void click(View view);
+    public void confirmarPedido();
 }

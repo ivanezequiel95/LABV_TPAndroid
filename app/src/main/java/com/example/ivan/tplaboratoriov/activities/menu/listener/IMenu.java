@@ -8,5 +8,6 @@ import android.view.View;
 
 public interface IMenu {
 
-    public void enviarPedido(View view);
+    public void click(View view);
+    public void enviarPedido();
 }

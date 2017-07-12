@@ -16,6 +16,6 @@ public class MenuListener implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        iMenu.enviarPedido(v);
+        iMenu.click(v);
     }
 }
