@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.ivan.tplaboratoriov.R;
 import com.example.ivan.tplaboratoriov.activities.menu.mvc.MView;
@@ -30,8 +31,8 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
     public ViewHolderMenu(View itemView) {
         super(itemView);
 
-        this.tvDescripcionProducto = (TextView)this.itemView.findViewById(R.id.item_menu_tv_descripcion);
-        this.tvPrecioProducto = (TextView)this.itemView.findViewById(R.id.item_menu_tv_precio);
+        this.tvDescripcionProducto = (TextView)this.itemView.findViewById(R.id.item_tv_descripcion);
+        this.tvPrecioProducto = (TextView)this.itemView.findViewById(R.id.item_tv_precio);
         this.bAgregregarProductoPedido = (Button)this.itemView.findViewById(R.id.item_menu_b_agregar);
 
         MenuRecyclerListener menuRecyclerListener = new MenuRecyclerListener(this);
@@ -39,17 +40,19 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
         this.bAgregregarProductoPedido.setOnClickListener(menuRecyclerListener);
     }
 
-
     @Override
     public void agregarProductoPedido(View view) {
 
         this.posicionItem = this.getAdapterPosition();
 
-        Pedido.agregarProductoPedido(Producto.productoList.get(this.posicionItem));
+        if (Pedido.agregarProductoPedido(Producto.productoList.get(this.posicionItem)))
+        {
+            Toast.makeText(this.mView.getActMenu(), "Se agregó correctamente", Toast.LENGTH_SHORT).show();
+            this.mView.cargarDatos();
+        } else
+            Toast.makeText(this.mView.getActMenu(), "No se agregó nada :(", Toast.LENGTH_SHORT).show();
 
         //Pedido.actualizar();
-
-        mView.cargarDatos();
 
     }
 

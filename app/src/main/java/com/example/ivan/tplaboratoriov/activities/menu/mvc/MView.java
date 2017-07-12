@@ -1,7 +1,6 @@
 package com.example.ivan.tplaboratoriov.activities.menu.mvc;
 
 import android.app.Activity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
@@ -30,14 +29,12 @@ public class MView {
         this.model = model;
         this.actMenu = actMenu;
 
-        this.tvPrecio = (TextView) this.actMenu.findViewById(R.id.menu_tv_precio);
-        this.tvSeleccionados = (TextView) this.actMenu.findViewById(R.id.menu_tv_seleccionados);
-        this.bEnviarPedido = (Button) this.actMenu.findViewById(R.id.menu_enviar_pedido);
+        this.tvPrecio = (TextView) this.actMenu.findViewById(R.id.tv_precio);
+        this.tvSeleccionados = (TextView) this.actMenu.findViewById(R.id.tv_seleccionados);
+        this.bEnviarPedido = (Button) this.actMenu.findViewById(R.id.menu_b_enviar_pedido);
         this.rvMenu = (RecyclerView) this.actMenu.findViewById(R.id.menu_recycler);
 
-        this.tvPrecio.setText(Pedido.getPrecioTotalPedido().toString());
-        this.tvSeleccionados.setText(Pedido.getCantidadProductosPedido().toString());
-
+        cargarDatos();
 
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this.actMenu);
@@ -58,7 +55,7 @@ public class MView {
 
     public void cargarDatos()
     {
-        ( (TextView)this.actMenu.findViewById(R.id.menu_tv_seleccionados) ).setText(Pedido.getCantidadProductosPedido().toString());
-        ( (TextView)this.actMenu.findViewById(R.id.menu_tv_precio) ).setText(Pedido.getPrecioTotalPedido().toString());
+        this.tvSeleccionados.setText(Pedido.getCantidadProductosPedido().toString());
+        this.tvPrecio.setText(Pedido.getPrecioTotalPedido().toString());
     }
 }

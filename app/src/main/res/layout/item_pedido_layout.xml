@@ -27,7 +27,7 @@
         android:layout_weight="0.60">
 
         <TextView
-            android:id="@+id/item_pedido_tv_descripcion"
+            android:id="@+id/item_tv_descripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/item_SinDescripcion"
@@ -49,7 +49,7 @@
             android:gravity="bottom">
 
             <TextView
-                android:id="@+id/item_pedido_tv_precio"
+                android:id="@+id/item_tv_precio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
