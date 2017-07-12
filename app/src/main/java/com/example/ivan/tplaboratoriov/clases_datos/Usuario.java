@@ -12,11 +12,11 @@ public class Usuario {
 
     public static List<Usuario> usuarioList;
 
-    public String nombre;
-    public String apellido;
-    public Integer dni;
-    public String mail;
-    public String pass;
+    private String nombre;
+    private String apellido;
+    private Integer dni;
+    private String mail;
+    private String pass;
 
     public Usuario(String mail, String pass) {
         this.mail = mail;
@@ -54,7 +54,6 @@ public class Usuario {
                     Usuario.usuarioList.add(usuario);
                     return true;
                 }
-
             }
         }else
         {

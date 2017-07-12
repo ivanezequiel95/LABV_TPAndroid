@@ -21,12 +21,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.menu.MenuActivity"
-            android:label="@string/menu_Titulo">
-        </activity>
+        <activity android:name=".activities.menu.MenuActivity"></activity>
 
-        <activity android:name=".activities.registro.RegistroActivity">
-        </activity>
+        <activity android:name=".activities.registro.RegistroActivity"></activity>
+
+        <activity android:name=".activities.pedido.PedidoActivity"></activity>
 
     </application>
 

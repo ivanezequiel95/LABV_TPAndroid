@@ -32,12 +32,16 @@
     <string name="menu_Estimado">Importe\nEstimado:</string>
     <string name="menu_Seleccionados">Elementos Seleccionados:</string>
     <string name="menu_b_Enviar">Enviar Pedido</string>
+    <string name="menu_tv_Precio">0.00</string>
+    <string name="menu_tv_Seleccionados">0</string>
 
     <!--Pedido-->
     <string name="pedido_Titulo">Mi Pedido</string>
     <string name="pedido_Estimado">Importe\nEstimado:</string>
     <string name="pedido_Seleccionados">Elementos Seleccionados:</string>
     <string name="pedido_b_Enviar">Enviar Pedido</string>
+    <string name="pedido_tv_Precio">0.00</string>
+    <string name="pedido_tv_Seleccionados">0</string>
 
     <!--Mensajes de dialogo-->
     <string name="registro_Nuevo">Felicitaciones!!/nUsted se ha registrado!</string>
@@ -45,5 +49,9 @@
     <string name="registro_ConfirmeClave">Vuelva a confirmar su Clave</string>
     <string name="registro_IngreseMail">Se debe ingresar un mail</string>
     <string name="registro_Complete">Complete TODOS los campos pls xd</string>
+
+    <!--Items Recycler View-->
+    <string name="item_SinDescripcion">Sin Descripcion</string>
+    <string name="item_Precio">0.00</string>
 
 </resources>

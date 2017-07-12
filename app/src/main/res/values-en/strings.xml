@@ -36,4 +36,10 @@
     <string name="registro_IngreseMail">That\'s not an email</string>
     <string name="registro_Nuevo">Congrats!!\nYou\'ve signed in</string>
     <string name="registro_OtroMail">Sorry, try another address</string>
+    <string name="item_SinDescripcion">No Description</string>
+    <string name="item_Precio">0.00</string>
+    <string name="menu_tv_Precio">0.00</string>
+    <string name="menu_tv_Seleccionados">0</string>
+    <string name="pedido_tv_Precio">0.00</string>
+    <string name="pedido_tv_Seleccionados">0</string>
 </resources>
