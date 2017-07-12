@@ -22,6 +22,9 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
+        Toast.makeText(this, "Listo para entrega PRIMER PARCIAL", Toast.LENGTH_SHORT).show();
+
+
         getSupportActionBar().hide();
 
         Usuario.usuarioList = new ArrayList<Usuario>();
