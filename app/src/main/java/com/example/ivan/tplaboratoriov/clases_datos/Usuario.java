@@ -18,6 +18,9 @@ public class Usuario {
     private String mail;
     private String pass;
 
+    public static Usuario userActual;
+
+
     public Usuario(String mail, String pass) {
         this.mail = mail;
         this.pass = pass;
@@ -30,6 +33,16 @@ public class Usuario {
         this.mail = mail;
         this.pass = pass;
     }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    /*
 
     public static boolean validarUsuario(Usuario usuario)
     {
@@ -82,5 +95,5 @@ public class Usuario {
 //        }
 //        Log.d("LALALA","ASDASD");
 //        return false;
-    }
+    }*/
 }

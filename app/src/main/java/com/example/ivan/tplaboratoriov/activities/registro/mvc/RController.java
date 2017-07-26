@@ -53,12 +53,12 @@ public class RController implements IRegistro{
             {
                 if (Validacion.reingresoPass(pass, repass))
                 {
-                    if (Usuario.registrarUsuario(new Usuario(nombre, apellido, dni, mail, pass)))
-                    {
-                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_Nuevo), Toast.LENGTH_SHORT).show();
-                        this.view.getActRegistro().finish();
-                    }else
-                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_OtroMail), Toast.LENGTH_SHORT).show();
+//                    if (Usuario.registrarUsuario(new Usuario(nombre, apellido, dni, mail, pass)))
+//                    {
+//                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_Nuevo), Toast.LENGTH_SHORT).show();
+//                        this.view.getActRegistro().finish();
+//                    }else
+//                        Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_OtroMail), Toast.LENGTH_SHORT).show();
 
                 }else
                     Toast.makeText(this.view.getActRegistro(), this.view.getActRegistro().getResources().getString(R.string.registro_ConfirmeClave), Toast.LENGTH_SHORT).show();

@@ -24,9 +24,13 @@ public class LoginActivity extends AppCompatActivity {
 
         Toast.makeText(this, "Listo para entrega PRIMER PARCIAL", Toast.LENGTH_SHORT).show();
 
-
         getSupportActionBar().hide();
 
+
+        /**
+         *
+         * Primer Parcial ( Ya no sirve )
+         *
         Usuario.usuarioList = new ArrayList<Usuario>();
 
         //Lo agrego porque sino cuando recorro la lista se va del bloque "for".
@@ -36,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         Usuario usuario = new Usuario("Ivan", "Ezequiel", 39266774, "algo@gmail.com", "123");
 
         Usuario.registrarUsuario(usuario);
+         **/
 
         LModel model = new LModel();
         LView view = new LView(model, this);

@@ -1,5 +1,7 @@
 package com.example.ivan.tplaboratoriov.activities.menu.recycler;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,14 +17,18 @@ import java.util.List;
  * Created by Ivan on 12/07/2017.
  */
 
-public class AdapterMenu extends RecyclerView.Adapter<ViewHolderMenu>{
+public class AdapterMenu extends RecyclerView.Adapter<ViewHolderMenu> implements Handler.Callback{
 
     private List<Producto> productoList;
     private MView mView;
 
+    Handler handler;
+
     public AdapterMenu(List<Producto> productoList, MView mView) {
         this.productoList = productoList;
         this.mView = mView;
+
+        this.handler = new Handler(this);
     }
 
     @Override
@@ -38,10 +44,24 @@ public class AdapterMenu extends RecyclerView.Adapter<ViewHolderMenu>{
         Producto producto = this.productoList.get(position);
         holder.getTvDescripcionProducto().setText(producto.getDescripcion().toString());
         holder.getTvPrecioProducto().setText(producto.getPrecio().toString());
+        holder.setPosicionItem(position);
     }
 
     @Override
     public int getItemCount() {
         return this.productoList.size();
+    }
+
+
+
+
+
+
+
+
+
+    @Override
+    public boolean handleMessage(Message msg) {
+        return false;
     }
 }

@@ -43,7 +43,6 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
     @Override
     public void agregarProductoPedido(View view) {
 
-        this.posicionItem = this.getAdapterPosition();
 
         if (Pedido.agregarProductoPedido(Producto.productoList.get(this.posicionItem)))
         {
@@ -58,6 +57,10 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
 
     public void setmView(MView mView) {
         this.mView = mView;
+    }
+
+    public void setPosicionItem(Integer posicionItem) {
+        this.posicionItem = posicionItem;
     }
 
     public TextView getTvDescripcionProducto() {
