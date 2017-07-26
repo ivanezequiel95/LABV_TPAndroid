@@ -3,6 +3,7 @@ package com.example.ivan.tplaboratoriov.activities.menu.recycler;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +25,7 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
     private TextView tvDescripcionProducto;
     private TextView tvPrecioProducto;
     private Button bAgregregarProductoPedido;
+    private ImageView ivMenu;
 
     private Integer posicionItem;
 
@@ -34,6 +36,7 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
         this.tvDescripcionProducto = (TextView)this.itemView.findViewById(R.id.item_tv_descripcion);
         this.tvPrecioProducto = (TextView)this.itemView.findViewById(R.id.item_tv_precio);
         this.bAgregregarProductoPedido = (Button)this.itemView.findViewById(R.id.item_menu_b_agregar);
+        this.ivMenu = (ImageView)this.itemView.findViewById(R.id.menu_img);
 
         MenuRecyclerListener menuRecyclerListener = new MenuRecyclerListener(this);
 
@@ -69,5 +72,9 @@ public class ViewHolderMenu extends RecyclerView.ViewHolder implements IMenuRecy
 
     public TextView getTvPrecioProducto() {
         return tvPrecioProducto;
+    }
+
+    public ImageView getIvMenu() {
+        return ivMenu;
     }
 }

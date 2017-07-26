@@ -42,6 +42,18 @@ public class Usuario {
         return pass;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public Integer getDni() {
+        return dni;
+    }
+
     /*
 
     public static boolean validarUsuario(Usuario usuario)

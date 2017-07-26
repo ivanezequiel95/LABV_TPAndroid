@@ -10,5 +10,8 @@ import com.example.ivan.tplaboratoriov.clases_datos.Usuario;
 
 public interface IRegistro {
 
-    public void registrarUsuario(View v);
+    public void clickBtn(View v);
+    public void validarUsuario(Usuario usuario);
+    public void registrarUsuario(Usuario usuario);
+
 }

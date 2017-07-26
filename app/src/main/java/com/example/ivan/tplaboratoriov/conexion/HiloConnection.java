@@ -13,6 +13,7 @@ public class HiloConnection implements Runnable {
     private String strUrl;
     private Integer posicionLista;
     private String request;
+    private String strJsonPOST;
 
 
     /**
@@ -44,6 +45,13 @@ public class HiloConnection implements Runnable {
         this.request = request;
     }
 
+    public HiloConnection(Handler handler, String strUrl, String request, String strJsonPOST) {
+        this.handler = handler;
+        this.strUrl = strUrl;
+        this.request = request;
+        this.strJsonPOST = strJsonPOST;
+    }
+
     @Override
     public void run() {
 
@@ -71,7 +79,8 @@ public class HiloConnection implements Runnable {
                 }
                 if (this.request.equals("POST"))
                 {
-
+                    message.arg1 = 3;
+                    message.obj = httpManager.getStrDataByPOST(this.strJsonPOST);
                 }
             }
 

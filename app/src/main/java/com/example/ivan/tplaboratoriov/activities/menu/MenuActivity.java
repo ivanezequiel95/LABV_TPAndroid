@@ -31,11 +31,15 @@ public class MenuActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(this.getString(R.string.menu_Titulo));
 
+
+        /*
         Producto.productoList = new ArrayList<Producto>();
 
         Producto.productoList.add(new Producto("Porción pizza", 15.00));
         Producto.productoList.add(new Producto("Media pizza", 50.00));
         Producto.productoList.add(new Producto("Pizza completa", 80.00));
+        */
+
 
         Pedido.pedidoList = new ArrayList<Producto>();
         Pedido.setCantidadProductosPedido(0);

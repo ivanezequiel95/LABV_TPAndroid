@@ -3,6 +3,7 @@ package com.example.ivan.tplaboratoriov.activities.pedido.recycler;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class ViewHolderPedido extends RecyclerView.ViewHolder implements IPedido
     private TextView tvDescripcionProducto;
     private TextView tvPrecioProducto;
     private Button bQuitarProductoPedido;
+    private ImageView ivPedido;
 
     private Integer posicionItem;
 
@@ -35,6 +37,7 @@ public class ViewHolderPedido extends RecyclerView.ViewHolder implements IPedido
         this.tvDescripcionProducto = (TextView)this.itemView.findViewById(R.id.item_tv_descripcion);
         this.tvPrecioProducto = (TextView)this.itemView.findViewById(R.id.item_tv_precio);
         this.bQuitarProductoPedido = (Button)this.itemView.findViewById(R.id.item_pedido_b_quitar);
+        this.ivPedido = (ImageView) this.itemView.findViewById(R.id.pedido_img);
 
         PedidoRecyclerListener pedidoRecyclerListener = new PedidoRecyclerListener(this);
 
@@ -44,13 +47,13 @@ public class ViewHolderPedido extends RecyclerView.ViewHolder implements IPedido
     @Override
     public void quitarProductoPedido(View view) {
 
-        this.posicionItem = this.getAdapterPosition();
-
         if (Pedido.borrarProductoPedido(Pedido.pedidoList.get(posicionItem)))
         {
             Toast.makeText(this.pView.getActPedido(), "Se quitó el elemento", Toast.LENGTH_SHORT).show();
             this.pView.cargarDatos();
+
             this.pView.getRvPedido().getAdapter().notifyItemRemoved(posicionItem);
+            this.pView.getRvPedido().getAdapter().notifyItemRangeChanged(posicionItem, Pedido.getCantidadProductosPedido());
         } else
             Toast.makeText(this.pView.getActPedido(), "No se pudo quitar", Toast.LENGTH_SHORT).show();
     }
@@ -65,5 +68,13 @@ public class ViewHolderPedido extends RecyclerView.ViewHolder implements IPedido
 
     public TextView getTvPrecioProducto() {
         return tvPrecioProducto;
+    }
+
+    public ImageView getIvPedido() {
+        return ivPedido;
+    }
+
+    public void setPosicionItem(Integer posicionItem) {
+        this.posicionItem = posicionItem;
     }
 }

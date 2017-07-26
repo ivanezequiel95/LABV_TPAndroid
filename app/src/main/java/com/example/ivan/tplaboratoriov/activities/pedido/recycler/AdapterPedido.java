@@ -1,5 +1,7 @@
 package com.example.ivan.tplaboratoriov.activities.pedido.recycler;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.ivan.tplaboratoriov.R;
 import com.example.ivan.tplaboratoriov.activities.pedido.mvc.PView;
+import com.example.ivan.tplaboratoriov.clases_datos.Pedido;
 import com.example.ivan.tplaboratoriov.clases_datos.Producto;
 
 import java.util.List;
@@ -17,11 +20,9 @@ import java.util.List;
 
 public class AdapterPedido extends RecyclerView.Adapter<ViewHolderPedido> {
 
-    private List<Producto> pedidoList;
     private PView pView;
 
     public AdapterPedido(List<Producto> pedidoList, PView pView) {
-        this.pedidoList = pedidoList;
         this.pView = pView;
     }
 
@@ -35,13 +36,20 @@ public class AdapterPedido extends RecyclerView.Adapter<ViewHolderPedido> {
     @Override
     public void onBindViewHolder(ViewHolderPedido holder, int position) {
         holder.setpView(this.pView);
-        Producto producto = this.pedidoList.get(position);
+        Producto producto = Pedido.pedidoList.get(position);
         holder.getTvDescripcionProducto().setText(producto.getDescripcion().toString());
         holder.getTvPrecioProducto().setText(producto.getPrecio().toString());
+        holder.setPosicionItem(position);
+
+        if (producto.getBytesImagen() != null)
+        {
+            Bitmap bitmap = BitmapFactory.decodeByteArray(producto.getBytesImagen(), 0, producto.getBytesImagen().length);
+            holder.getIvPedido().setImageBitmap(bitmap);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return this.pedidoList.size();
+        return Pedido.getCantidadProductosPedido();
     }
 }

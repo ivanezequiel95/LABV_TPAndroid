@@ -10,12 +10,19 @@ public class Producto {
 
     private String descripcion;
     private Double precio;
+    private String urlImagen;
+
+    private byte[] bytesImagen;
+
 
     public static List<Producto> productoList;
 
-    public Producto(String descripcion, Double precio) {
+    public Producto(String descripcion, Double precio, String urlImagen) {
         this.descripcion = descripcion;
         this.precio = precio;
+        this.urlImagen = urlImagen;
+
+        this.bytesImagen = null;
     }
 
     public String getDescripcion() {
@@ -24,5 +31,17 @@ public class Producto {
 
     public Double getPrecio() {
         return precio;
+    }
+
+    public String getUrlImagen() {
+        return urlImagen;
+    }
+
+    public byte[] getBytesImagen() {
+        return bytesImagen;
+    }
+
+    public void setBytesImagen(byte[] bytesImagen) {
+        this.bytesImagen = bytesImagen;
     }
 }

@@ -24,7 +24,8 @@ public class MController implements IMenu{
         this.mView = mView;
 
         MenuListener menuListener = new MenuListener(this);
-        this.mView.getbEnviarPedido().setOnClickListener(menuListener);
+        this.mView.getbEnviarPedido().setOnClickListener(menuListener);// esto tiene que ser un FAB
+        //AGREGAR UN SWIPE AL RECYCLER
     }
 
     @Override

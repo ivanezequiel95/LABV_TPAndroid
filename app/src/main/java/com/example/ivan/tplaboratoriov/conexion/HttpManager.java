@@ -3,6 +3,7 @@ package com.example.ivan.tplaboratoriov.conexion;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -75,5 +76,33 @@ public class HttpManager {
 
         byte[] bytes = getBytesDataByGET();
         return new String(bytes, "UTF-8");
+    }
+
+    String getStrDataByPOST(String stringJsonPost) throws IOException {
+
+        byte[] bytes = getBytesDataByPOST(stringJsonPost);
+        return new String(bytes, "UTF-8");
+    }
+
+    private byte[] getBytesDataByPOST(String stringJsonPost) throws IOException {
+
+        this.connection.setRequestMethod("POST");
+        this.connection.setDoOutput(true);
+
+        this.connection.setRequestProperty("Content-Type", "application/json");
+        this.connection.connect();
+
+        OutputStream os = this.connection.getOutputStream();
+        os.write(stringJsonPost.getBytes());
+        os.flush();
+
+        int response = this.connection.getResponseCode();
+
+        if(response==200) {
+            InputStream is = this.connection.getInputStream();
+            return readFully(is);
+        }
+        else
+            throw new IOException();
     }
 }

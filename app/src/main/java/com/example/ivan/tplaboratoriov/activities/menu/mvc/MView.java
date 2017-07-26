@@ -41,7 +41,7 @@ public class MView {
         this.rvMenu.setLayoutManager(layoutManager);
 
 
-        AdapterMenu adapterMenu = new AdapterMenu(Producto.productoList, this);
+        AdapterMenu adapterMenu = new AdapterMenu(this);
         this.rvMenu.setAdapter(adapterMenu);
     }
 
