@@ -69,4 +69,11 @@ public class PView {
         this.tvSeleccionados.setText(Pedido.getCantidadProductosPedido().toString());
         this.tvPrecio.setText(Pedido.getPrecioTotalPedido().toString());
     }
+
+    public void limpiarPedido()
+    {
+        Pedido.unsetPedido();
+        this.cargarDatos();
+        this.rvPedido.getAdapter().notifyDataSetChanged();
+    }
 }
