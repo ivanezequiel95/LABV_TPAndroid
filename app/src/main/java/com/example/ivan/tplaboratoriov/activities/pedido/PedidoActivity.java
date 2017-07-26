@@ -21,6 +21,7 @@ import com.example.ivan.tplaboratoriov.clases_datos.Pedido;
 public class PedidoActivity extends AppCompatActivity {
 
     PController pController;
+    PView pView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class PedidoActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(this.getString(R.string.pedido_Titulo));
 
         PModel pModel = new PModel();
-        PView pView = new PView(pModel, this);
+        pView = new PView(pModel, this);
         pController= new PController(pView);
     }
 
@@ -49,7 +50,7 @@ public class PedidoActivity extends AppCompatActivity {
             this.pController.confirmarPedido();
 
         if (item.getItemId() == R.id.pedido_options_b_limpiarPedido)
-            Pedido.unsetPedido();
+            this.pView.limpiarPedido();
 
         if (item.getItemId() == R.id.pedido_options_b_Logout)
         {

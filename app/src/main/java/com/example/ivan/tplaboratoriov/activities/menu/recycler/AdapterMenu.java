@@ -38,7 +38,7 @@ public class AdapterMenu extends RecyclerView.Adapter<ViewHolderMenu> implements
 
         Producto.productoList = new ArrayList<Producto>();
         this.handler = new Handler(this);
-        this.executorService = Executors.newFixedThreadPool(5);
+        this.executorService = Executors.newFixedThreadPool(7);
 
         this.setearListaProductos();//Inicia el seteo, la lista se setea en JSONParser
     }
